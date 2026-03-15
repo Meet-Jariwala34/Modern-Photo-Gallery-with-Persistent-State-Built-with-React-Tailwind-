@@ -255,7 +255,7 @@ export default function Home() {
             }
 
             { state.loader && <Loader/>}
-            {!state.isSearch && state.fav.length > 0 &&
+            {state.fav.length > 0 &&
                 <button onClick={handleLoadMore} className='h-15 w-45 bg-green-400 p-2 rounded-2xl font-bold items-center justify-center cursor-pointer flex'>Load More</button>
             }
         </div>
