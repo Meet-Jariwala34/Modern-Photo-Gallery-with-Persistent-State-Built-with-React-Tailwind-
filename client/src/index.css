@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+body{
+    overflow-x: hidden;
+}
+
+
+#card{
+    box-shadow: 1px 1px 10px rgba(255,255,255,0.7);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#card:hover{
+    transform: scale(1.05);
+}
+
+button:hover{
+    opacity: 0.85;
+}
