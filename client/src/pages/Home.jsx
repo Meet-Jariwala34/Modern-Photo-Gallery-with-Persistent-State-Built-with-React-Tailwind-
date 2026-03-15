@@ -215,7 +215,7 @@ export default function Home() {
                             <img src={item.download_url} alt="img" className='w-full h-[80%] object-cover rounded-t-lg'/>
                             <div className='p-2 h-[20%] w-full text-2xl font-bold flex items-center justify-between'>
                                 <div><p>{item.author}</p></div>
-                                <div><label className='cursor-pointer text-red-500' htmlFor={item.id}>Like : <input className='appearance-none h-6 w-6 border-2 border-red-400 rounded-md 
+                                <div><label className='cursor-pointer text-red-500' htmlFor={item.id}>Like : <input onChange={(e)=>{ e.target.checked ? handleAddFav(item) : handleRemoveFav(item) }} checked={state.fav.some(f => f.id === item.id)} className='appearance-none h-6 w-6 border-2 border-red-400 rounded-md 
                 checked:bg-red-400 checked:border-transparent 
                 focus:outline-none transition duration-200' type='checkbox' id={item.id}></input> </label></div>
                             </div>
